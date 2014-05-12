@@ -9,6 +9,14 @@ team_list = {};
 goals_vs_mtx = [];
 numb_games = [];
 
+% Teams only in 2014 Tourney
+team_list_2014 = {'Algeria', 'Cameroon', 'Côte dIvoire', 'Ghana', 'Nigeria'...
+    'Australia', 'Iran', 'Japan', 'Korea Republic', 'Belgium', 'Bosnia-Herzegovina'...
+    'Croatia', 'England', 'France', 'Germany', 'Greece', 'Italy', 'Netherlands',...
+    'Portugal', 'Russia', 'Spain', 'Switzerland', 'Costa Rica', 'Honduras',...
+    'Mexico', 'United States', 'Argentina', 'Brazil', 'Chile', 'Colombia',...
+    'Ecuador', 'Uruguay'};
+
 for i = 2:length(c)
     %copy team names
     home_team = c{i,2};
@@ -37,7 +45,6 @@ for i = 2:length(c)
     %add games
     numb_games(home_idx) = numb_games(home_idx) + 1;
     numb_games(away_idx) = numb_games(away_idx) + 1;
-    
 end
 
 results.team_list = team_list;
