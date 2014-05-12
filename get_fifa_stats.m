@@ -40,28 +40,6 @@ for i = 2:length(c)
     
 end
 
-idx_remove = find(numb_games < 30);
-
-goals_vs_mtx(idx_remove,:) = [];
-goals_vs_mtx(:,idx_remove) = [];
-numb_games(idx_remove) = [];
-
-
-SCALE_M = diag(1./numb_games);
-[e_vect, ~] = eig(SCALE_M*goals_vs_mtx);
-
-team_rank = abs(e_vect(:,1));
-
-
-[x, I] = sort(team_rank);
-results.Ranked_Teams = team_list(I);
-
-[x, I] = sort(sum(goals_vs_mtx')./numb_games');
-results.Rank_By_Goals = team_list(I);
-
-figure;
-plot(team_rank);
-
 results.team_list = team_list;
 results.goals_vs_mtx = goals_vs_mtx;
 results.numb_games = numb_games;
