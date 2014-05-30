@@ -1,6 +1,7 @@
 close all 
 clear all
 
+
 res = get_fifa_stats('results.csv');
 numb_games = res.numb_games;
 goals_vs_mtx = res.goals_vs_mtx;
@@ -27,4 +28,6 @@ Rank_By_Goals = team_list(I);
 
 
 Ranked_Teams{1:25}
+
+
 
