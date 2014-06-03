@@ -13,7 +13,7 @@ disp([team2 ':']);
 disp(head_2_head.results.matchup_mtx(team2_idx, team1_idx));
 
 %is the difference great enough?
-THRESH = 0.015;
+THRESH = 0.005;
 if abs(head_2_head.results.matchup_mtx(team1_idx, team2_idx) - head_2_head.results.matchup_mtx(team2_idx, team1_idx)) > THRESH
     disp('Using head to head');
     if head_2_head.results.matchup_mtx(team1_idx, team2_idx) > head_2_head.results.matchup_mtx(team2_idx, team1_idx)

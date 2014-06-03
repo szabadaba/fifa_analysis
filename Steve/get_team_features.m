@@ -24,8 +24,8 @@ for i = 1:length(team_list)
    end
 end
 
-match_played = zeros(size(res.games_vs_mtx));
-score_mtx = zeros(size(res.games_vs_mtx));
+match_played = zeros(size(games_vs_mtx));
+score_mtx = zeros(size(games_vs_mtx));
 for i = 1:size(games_vs_mtx,1)
     for j = 1:size(games_vs_mtx,2)
         if games_vs_mtx(i,j)
@@ -55,7 +55,7 @@ options = optimset('MaxIter', 1000);
 
 
 % Set Regularization
-lambda = 1;
+lambda = .1;
 theta = fmincg (@(t)(cofiCostFunc(t, score_mtx, match_played, num_users, num_movies, ...
                                 num_features, lambda)), ...
                 initial_parameters, options);
