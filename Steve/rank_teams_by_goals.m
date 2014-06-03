@@ -26,8 +26,10 @@ Ranked_Teams = team_list(I);
 [x, I] = sort(sum(goals_vs_mtx')./numb_games', 'descend');
 Rank_By_Goals = team_list(I);
 
+results.rank_by_goals = Rank_By_Goals;
+save('rank_by_goals.mat', 'results');
 
-Ranked_Teams{1:25}
+% Ranked_Teams{1:25}
 
 
 

@@ -80,21 +80,26 @@ for i = 1:length(res_mtx)
     end
 end
 
+results.team_list = small_team_list;
+results.matchup_mtx = res_mtx;
 
-match = {'Russia', 'Germany'};
+save('matchup_results', 'results');
 
-op1_idx = find(strcmp(small_team_list, match{1}));
-op2_idx = find(strcmp(small_team_list, match{2}));
 
-disp(match{1});
-disp(res_mtx(op1_idx, op2_idx));
-disp(match{2});
-disp(res_mtx(op2_idx, op1_idx));
-
-for i = 1:length(small_team_list)
-   if  res_mtx(op1_idx,i) < res_mtx(i,op1_idx)
-       disp(small_team_list{i})
-   end
-end
+% match = {'Russia', 'Germany'};
+% 
+% op1_idx = find(strcmp(small_team_list, match{1}));
+% op2_idx = find(strcmp(small_team_list, match{2}));
+% 
+% disp(match{1});
+% disp(res_mtx(op1_idx, op2_idx));
+% disp(match{2});
+% disp(res_mtx(op2_idx, op1_idx));
+% 
+% for i = 1:length(small_team_list)
+%    if  res_mtx(op1_idx,i) < res_mtx(i,op1_idx)
+%        disp(small_team_list{i})
+%    end
+% end
 
 

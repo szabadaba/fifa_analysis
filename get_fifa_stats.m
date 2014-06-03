@@ -29,7 +29,7 @@ for i = 2:length(c)
         numb_games = [numb_games; 0];
     end
     
-    %fine indeces for teams
+    %find indices for teams
     home_idx = find(strcmp(team_list,home_team));
     away_idx = find(strcmp(team_list,away_team));
     
@@ -39,8 +39,6 @@ for i = 2:length(c)
     
     games_vs_mtx(home_idx, away_idx) = games_vs_mtx(home_idx, away_idx) + 1;
     games_vs_mtx(away_idx, home_idx) = games_vs_mtx(away_idx, home_idx) + 1;
-    
-    %
     
     %add games
     numb_games(home_idx) = numb_games(home_idx) + 1;
