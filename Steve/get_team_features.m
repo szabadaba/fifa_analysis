@@ -55,7 +55,7 @@ options = optimset('MaxIter', 1000);
 
 
 % Set Regularization
-lambda = 1;
+lambda = .1;
 theta = fmincg (@(t)(cofiCostFunc(t, score_mtx, match_played, num_users, num_movies, ...
                                 num_features, lambda)), ...
                 initial_parameters, options);
